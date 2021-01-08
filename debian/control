@@ -1,0 +1,43 @@
+Source: sentry-native
+Section: libs
+Priority: optional
+Maintainer: Eberhard Beilharz <eb1@sil.org>
+Build-Depends:
+ cmake,
+ debhelper (>=11),
+ libcurl4,
+ libcurl4-openssl-dev
+Standards-Version: 4.5.0
+Vcs-Git: https://github.com/getsentry/sentry-native.git
+Vcs-Browser: https://github.com/getsentry/sentry-native
+Homepage: https://sentry.io/
+
+Package: libsentry0
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: Sentry SDK for C, C++ and native applications
+ The Sentry Native SDK is an error and crash reporting client for native
+ applications, optimized for C and C++. Sentry allows one to add tags,
+ breadcrumbs and arbitrary custom context to enrich error reports. Supports
+ Sentry 20.6.0 and later.
+
+Package: libsentry0-dev
+Provides: libsentry-dev
+Conflicts: libsentry-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ libsentry0 (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: Development files for libsentry
+ The Sentry Native SDK is an error and crash reporting client for native
+ applications, optimized for C and C++. Sentry allows one to add tags,
+ breadcrumbs and arbitrary custom context to enrich error reports. Supports
+ Sentry 20.6.0 and later.
+ .
+ This package provides the development files that allow one to build
+ software which uses libsentry.

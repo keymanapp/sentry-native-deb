@@ -1,0 +1,17 @@
+Add version number to library
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -210,7 +210,11 @@
+ 	)
+ endif()
+ 
+-set_target_properties(sentry PROPERTIES PUBLIC_HEADER "include/sentry.h")
++set_target_properties(sentry PROPERTIES
++	PUBLIC_HEADER "include/sentry.h"
++	SOVERSION 0
++	VERSION 0.4.4
++)
+ 
+ # check size type
+ include(CheckTypeSize)

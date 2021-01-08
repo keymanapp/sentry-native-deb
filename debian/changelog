@@ -1,0 +1,5 @@
+sentry-native (0.4.4-1) UNRELEASED; urgency=low
+
+  * Initial release.
+
+ -- Eberhard Beilharz <eb1@sil.org>  Fri, 08 Jan 2021 18:10:55 +0100

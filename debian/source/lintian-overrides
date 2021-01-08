@@ -1,0 +1,5 @@
+# license in the file has been changed and seems to address the issue lintian complains about
+ source: license-problem-convert-utf-code external/breakpad/src/common/convert_UTF.*
+
+# files are not used
+ source: source-is-missing external/crashpad/snapshot/elf/elf_image_reader_fuzzer_corpus/*
