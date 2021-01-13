@@ -1,2 +1,4 @@
-# You must remove unused comment lines for the released package.
-version=3
+version=4
+opts="filenamemangle=s%(?:.*?)?(\d[\d.]*)/@PACKAGE@\.zip%@PACKAGE@-$1.zip%,repack" \
+    https://github.com/getsentry/@PACKAGE@/releases \
+      (?:.*?/)?(\d[\d.]*)/@PACKAGE@\.zip debian uupdate
